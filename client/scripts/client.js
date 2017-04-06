@@ -52,6 +52,7 @@ function addMovie(newMovie) {
   console.log("logging new movie: ", newMovie);
   movieArray.push(newMovie);
   console.log(movieArray);
+  console.log(movies);
 }
 
 //this makes it public

@@ -27,7 +27,7 @@
     <div ng-controller="TwoController">
       <!-- display movies using ng-repeat -->
       <!-- grab movies from factory and display -->
-        <div ng-repeat="movie in movies.movieArray">
+        <div ng-repeat="movie in movies.movieArray track by $index">
           <p> Title: {{movie.title}} </p>
           <p> Description: {{movie.description}}<p>
           <p> Director: {{movie.director}}</p>

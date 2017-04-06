@@ -12,22 +12,30 @@
 
   </head>
   <body>
-    <!-- <h1 class="jumbotron">Movies!</h1> -->
-    <div ng-controller="OneController">
+    <h1 class="jumbotron">Movies!</h1>
+
+    <div class="row">
+    <div class="col-xs-6" ng-controller="OneController">
       <!-- inputs for title, description, director, length -->
       <!-- submit button -->
+      <h2>Add a Movie!</h2>
       <input type="text" ng-model="movie.title" placeholder="title">
+      <br>
       <input type="text" ng-model="movie.description" placeholder="description">
+      <br>
       <input type="text" ng-model="movie.director" placeholder="director">
+      <br>
       <input type="text" ng-model="movie.runTime" placeholder="run time">
+      <br>
       <button ng-click="addMovie(movie)">Add Movie!</button>
 
     </div>
 
-    <div ng-controller="TwoController">
+    <div class="col-xs-6" ng-controller="TwoController">
       <!-- display movies using ng-repeat -->
       <!-- grab movies from factory and display -->
-        <div ng-repeat="movie in movies.movieArray track by $index">
+      <h2>Movie Listings</h2>
+        <div class="well" ng-repeat="movie in movies.movieArray track by $index">
           <p> Title: {{movie.title}} </p>
           <p> Description: {{movie.description}}<p>
           <p> Director: {{movie.director}}</p>
@@ -35,5 +43,6 @@
         </div>
 
     </div>
+  </div>
   </body>
 </html>

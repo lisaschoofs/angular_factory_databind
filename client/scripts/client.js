@@ -5,7 +5,6 @@ myApp.controller('OneController', ['$scope', 'MovieService', function($scope, Mo
 // The controller for the first view should have a button that 'grabs'
 // the information off of the form and stores it inside of a factory for the second view.
 
-    // $scope.movie = MovieService.movie;
     $scope.movie = {
       title: '',
       description: '',
@@ -34,12 +33,8 @@ var movies = {
 
 function addMovie(newMovie) {
   console.log("logging new movie: ", newMovie);
-  // angular.copy(movie, [destination]);
-  // angular.copy($scope.newMovie);
   movieArray.push(angular.copy(newMovie));
-  //
-  console.log(movieArray);
-  console.log(movies);
+
 }
 
 //this makes it public
